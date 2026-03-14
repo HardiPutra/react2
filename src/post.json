@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Hardi Belajar React",
+    "tags": ["react", "frontend"],
+    "date": "2026-03-12",
+    "isNew": true
+  },
+  {
+    "title": "Hardi Mulai Fokus React",
+    "tags": ["harus", "konsisten"],
+    "date": "2026-03-15",
+    "isNew": false
+  },
+  {
+    "title": "Hardi Akan Menguasai React",
+    "tags": ["pasti", "bisa"],
+    "date": "2026-03-20",
+    "isNew": false
+  },
+  {
+    "title": "Hardi Dapat Project React",
+    "tags": ["gaji", "pertama"],
+    "date": "2026-03-26",
+    "isNew": false
+  }
+]
