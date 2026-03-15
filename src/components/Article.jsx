@@ -1,19 +1,23 @@
+import { useContext } from "react";
+import { GlobalContext } from "../context";
+
 const ArticleStatus = ({ isNew }) => {
   return isNew && <span> --Baru</span>;
 };
 
-const NewArticle = () => {
-  return <span>New Lagi</span>;
-};
 function Article({ title, date, tags, isNew }) {
+  const user = useContext(GlobalContext);
+
   return (
     <>
       <h3>{title}</h3>
       <small>
         Date : {date} Tags : {tags.join(", ")}
+        <ArticleStatus isNew={isNew} />
       </small>
-      <ArticleStatus isNew={isNew} />
-      {isNew && <NewArticle />}
+      <div>
+        <small>Ditulis Oleh {user.username}</small>
+      </div>
     </>
   );
 }
