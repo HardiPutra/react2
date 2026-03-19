@@ -5,10 +5,15 @@ import Blog from "../pages/blogs/index";
 import Post from "../pages/blogs/_id";
 import About from "../pages/About";
 
+import ErrorPage from "../components/ErrorPage.jsx";
+
+import { posts, postById } from "../apis/loaders";
+
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -17,10 +22,12 @@ export const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blog />,
+        loader: posts,
       },
       {
         path: "/blogs/:id",
         element: <Post />,
+        loader: postById,
       },
       {
         path: "/about",
